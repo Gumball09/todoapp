@@ -1,24 +1,52 @@
-# README
+# Todo App with RoR
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I recently built a To-Do application using Ruby on Rails, and let me tell you – sticking to specific older versions was quite the adventure!
 
-Things you may want to cover:
+## What I Used
 
-* Ruby version
+* **Ruby:** 2.4.1
+* **Rails:** 5.1.0
+* **Database:** SQLite
+* **Frontend:** ERB templates with SCSS
+* **Architecture:** MVC (Model–View–Controller)
 
-* System dependencies
+## Version Challenge : 
 
-* Configuration
+Setting up this project turned out to be way more challenging than I expected. Working with older versions of Ruby and Rails meant dealing with a bunch of compatibility headaches between different dependencies.
 
-* Database creation
+### The Nokogiri Nightmare
 
-* Database initialization
+The biggest headache? The `nokogiri` gem. This thing gave me so much trouble!
 
-* How to run the test suite
+* Newer versions just wouldn't play nice with Ruby 2.4.1
+* I spent way too much time debugging before figuring out the solution
+* Eventually fixed it by locking down the exact version in my `Gemfile`
 
-* Services (job queues, cache servers, search engines, etc.)
+```ruby
+gem "nokogiri", "1.10.10"
+```
 
-* Deployment instructions
+## Issues Faced
 
-* ...
+Throughout the project, these were the errors i faced and debugged : 
+
+* Missing gems everywhere (`sass-rails`, `turbolinks`, `listen` – you name it)
+* Asset pipeline throwing fits
+* Routes not matching up with controllers
+* Methods that Rails deprecated ages ago
+
+
+## Learnings
+
+* Getting legacy Ruby & Rails environments up and running
+* Wrorking with gem conflicts and actually winning
+* Understanding when and why to use `bundle exec`
+* Making sense of Rails routing and RESTful patterns
+* How models, controllers, views, and partials all work together with "db:migrate" and "scaffolding"
+* How Rails magically generates helper methods and paths
+
+## Bootcamp Notes
+
+I kept detailed notes throughout this whole learning process and put them together in a PDF:
+
+👉 [View Bootcamp Learnings PDF](https://github.com/samuelmovi/ruby-rails-bootcamp-learning/blob/master/learnings.pdf)
