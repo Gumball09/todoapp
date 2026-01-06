@@ -1,1 +1,6 @@
 <p><%= todo_item.content %></p>
+<%= link_to "Delete", todo_list_todo_item_path(@todo_list, todo_item.id), 
+method: :delete, data: { confirm: "Are you sure?" } %>
+
+# this will not work yet, and will give an error if we click the delete button.
+# to make it work correctly, we need to add a destroy action to the todo_items controller.
