@@ -43,7 +43,7 @@ Throughout the project, these were the errors i faced and debugged :
 * How models, controllers, views, and partials all work together with "db:migrate" and "scaffolding"
 * How Rails magically generates helper methods and paths
 
--`I implemented changes to the HTML and CSS to make a suitable design of my taste`
+-`I implemented changes to the HTML and CSS to make a suitable design of my taste` </br>
 -`I also implemented some changes in the Ruby Code after going through chatGPT, and the documentation like :- checks for seeing that the input for todo is not logged empty`
 
 ## Bootcamp Notes
