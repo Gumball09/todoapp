@@ -4,6 +4,11 @@ class TodoItemsController < ApplicationController
 
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
+    if @todo_item.save
+      flash[:success] = "Todo item was created successfully."
+    else
+      flash[:error] = "Todo item could not be created."
+    end
     redirect_to @todo_list
   end
 
